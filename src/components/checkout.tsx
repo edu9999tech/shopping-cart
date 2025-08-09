@@ -11,7 +11,7 @@ type CheckoutProps = {
     onClearCart?: () => void;
 };
 
-const Checkout = ({ cartItems, onRemoveFromCart, onUpdateQuantity, onClearCart }: CheckoutProps) => {
+const Checkout = ({ cartItems, onRemoveFromCart, onClearCart }: CheckoutProps) => {
     // Convert cartItems to CartItem with quantity
     const [itemsWithQuantity, setItemsWithQuantity] = useState<CartItem[]>(
         cartItems.map(item => ({ ...item, quantity: 1 }))

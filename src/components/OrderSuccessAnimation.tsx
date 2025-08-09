@@ -30,7 +30,7 @@ const OrderSuccessAnimation: React.FC<OrderSuccessAnimationProps> = ({
       () => setAnimationStage(4), // Show celebration particles
     ];
 
-    let timeouts: NodeJS.Timeout[] = [];
+    let timeouts: ReturnType<typeof setTimeout>[] = [];
 
     stages.forEach((stage, index) => {
       const timeout = setTimeout(stage, index * 800);

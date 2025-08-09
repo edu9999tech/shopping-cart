@@ -165,7 +165,7 @@ export const ConfirmOrder = ({ onClose, onConfirmOrder, orderDetails }: ConfirmO
             <OrderSuccessAnimation
                 isVisible={showSuccessAnimation}
                 onComplete={handleAnimationComplete}
-                orderDetails={orderConfirmationData}
+                orderDetails={orderConfirmationData || undefined}
             />
         </div>
     )

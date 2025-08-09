@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Navheader from './components/Navheader'
 import Footer from './components/footer'
 import { Cart } from './components/cart'

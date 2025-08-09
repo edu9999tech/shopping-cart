@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Catalog from './catalog'
 import Checkout from './checkout'
 import {catalogMockData} from '../mockData/catalogMockData'
@@ -9,7 +9,7 @@ type CartProps = {
     catalogItems?: CatalogItem[];
 }
 
-export const Cart = ({ catalogItems = catalogMockData }: CartProps) => {
+export const Cart = ({ catalogItems }: CartProps) => {
 
     const [cartItems, setCartItems] = useState<CatalogItem[]>([]);
 
@@ -45,7 +45,7 @@ export const Cart = ({ catalogItems = catalogMockData }: CartProps) => {
 
     return (
         <div className='flex flex-col gap-1.5 md:flex-row w-full h-[78vh] overflow-auto'>
-            <Catalog items={catalogMockData} onAddToCart={handleAddToCart}/>
+            <Catalog items={catalogItems || catalogMockData} onAddToCart={handleAddToCart}/>
             <Checkout 
                 cartItems={cartItems} 
                 onRemoveFromCart={handleRemoveFromCart}

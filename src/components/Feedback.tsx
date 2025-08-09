@@ -24,7 +24,7 @@ const Feedback: React.FC<FeedbackProps> = ({ open, onClose }) => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [selectedRating, setSelectedRating] = useState(0);
 
-  const rating = watch('rating');
+
 
   const handleClose = () => {
     onClose('closed');

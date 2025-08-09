@@ -63,7 +63,7 @@ export const handleImageError = (event: React.SyntheticEvent<HTMLImageElement, E
 /**
  * Get optimized image URL with lazy loading
  */
-export const getOptimizedImageUrl = (originalUrl: string, width: number = 400, height: number = 300): string => {
+export const getOptimizedImageUrl = (originalUrl: string): string => {
   // If it's already an optimized Unsplash URL, return as is
   if (originalUrl.includes('images.unsplash.com')) {
     return originalUrl;
